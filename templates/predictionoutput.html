@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>output Page</title>
+  <link rel="stylesheet" href="../static/css/new.css">
+</head>
+<body>
+    <header>
+        <h1>Breast Cancer Detection From Ultra Sound Images</h1>
+    </header>
+
+  <nav>
+    <a href="/">home</a>
+    <a href="/logina">Login</a>
+    <a href="/predicta">recommend</a>
+    <a href="/logouta">Logout</a>
+  </nav>
+
+<div class="container4">
+  <center>  
+    <h1 class="h1"> Breast Cancer Detection Result :</h1>
+
+  
+    {% if prediction %}
+    <font class="color-black">
+        <p>{{ prediction.p }}</p>
+    </font>
+    
+    <img src="{{prediction.image}}" alt="image" width="300" height="200">
+    <img src="../static/img/{{au}}"  width="300" height="200"></img> 
+    <h1 class="h1"> Breast Cancer Detection Status :</h1>
+    <p>{{prediction.data}}</p>
+    
+    {% endif %} 
+      </div>
+  
+   
+  </center>
+
+
+
+
+    
+ 
+
+</div>
+</body>
+</html>
